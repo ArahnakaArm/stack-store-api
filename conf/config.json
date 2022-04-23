@@ -1,0 +1,18 @@
+{
+    "routing" : {
+        "contact" : ["/api/contact"],
+        
+        "auth" : ["/api/login"],
+
+        "getUser" : ["/api/user"], 
+        "getUserById" : ["/api/user/:id"], 
+        "getUserProfile" : ["/api/profile"], 
+        "updateUserById" : ["/api/user/:id"],
+        "updateUserByMe" : ["/api/profile"],
+        "register" : ["/api/register"] ,
+        "resetPass" : ["/api/reset-password"],
+        "resetPassById" : ["/api/reset-password/:id"],
+        "login" : ["/api/login"] 
+    },
+    "jwtSecret" : "SECRET"
+}

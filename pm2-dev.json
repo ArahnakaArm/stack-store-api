@@ -1,0 +1,34 @@
+{
+    "apps": [{
+        "exec_mode": "fork",
+        "instances": 1,
+        "script": "index.js",
+        "name": "stack-store",
+        "interpreter": "node",
+        "watch" : ["src","conf","models"],
+        "ignore_watch" : ["node_modules","logs"],
+        "env": {
+            "app_host": "0.0.0.0",
+            "app_port": "3000",
+            "use_https": false,
+            "key": "ssl/server.key",
+            "cert": "ssl/server.crt",
+            "http_req_timeout": 10,
+            "session": 30,
+            "service": {
+                "mysql": {
+                    "ip": "db-mysql-sgp1-34879-do-user-3638015-0.b.db.ondigitalocean.com",
+                    "port": "25060",
+                    "dbName": "iot_stackstore",
+                    "options": {
+                        "user": "doadmin",
+                        "pass": "msY8nrQUifaVxfSM",
+                        "logging": false
+                    }
+                }
+            },
+            "whiteListReq":["*"]
+          
+        }
+    }]
+}
